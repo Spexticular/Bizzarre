@@ -21,11 +21,15 @@ grav = 5
 screen = 1
 level = 1
 lives = 5
-playersprite = pygame.image.load('player.png')
 isjump = False
 isfall = False
 
 # Making the player
+# Player Sprites
+playersprite = pygame.image.load('player-removebg-preview.png')
+playerleft = pygame.image.load('player-left-removebg-preview.png')
+
+# Player Class
 class player(object):
   def __init__(self):
     self.image = playersprite
@@ -41,6 +45,7 @@ class player(object):
       self.x += speed
     if key[pygame.K_LEFT]:
       self.x -= speed
+      self.image = playerleft
     if isfall:
       self.y += grav
 flp()
