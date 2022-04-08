@@ -44,7 +44,9 @@ class player(object):
       self.y += grav
 # Making the main menu
 def mainmenu():
-  pygame.display.set_mode(())
+  win = pygame.display.set_mode((1200, 752))
+  bg = pygame.image.load('placeholder')
+  win.blit(bg, (0, 0)
   
 # Main game loop and a check.
 if play:
